@@ -12,8 +12,11 @@
     instead of navigating the browser to that page, it renders that
     page in the iframe below. Set the iframe's `src` attribute to a URL will cause it to render the page.
     */
-    $(function() {
-      // Write code here
+    $(document).ready(function(){
+      $("a").click(function(event){
+        event.preventDefault();
+        $("#iframe").attr("src", $(this).attr("href"));
+      })
     });
     </script>
   </head>
